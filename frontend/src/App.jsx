@@ -1,10 +1,18 @@
 import React from 'react';
 import { Button } from 'antd';
-import './App.css';
 
 const App = () => (
   <div className="App">
-    <Button type="primary">Button</Button>
+          <div>
+        <p>React Vitejs Antd template0</p>
+        <p>
+          <Button type="primary">Primary</Button>
+        </p>
+        <br/>
+        <div style={{ padding: 5 }}>
+          User Info
+        </div>
+      </div>
   </div>
 );
 
