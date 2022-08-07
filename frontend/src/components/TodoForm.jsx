@@ -1,7 +1,6 @@
 import React from 'react'
 import { Form, Row, Col, Button, Input } from 'antd'
 import { PlusCircleFilled } from '@ant-design/icons'
-import renderEmpty from 'antd/lib/config-provider/renderEmpty';
 
 const TodoForm = ({onFormSubmit}) => {
   const [form] = Form.useForm();
@@ -13,7 +12,7 @@ const TodoForm = ({onFormSubmit}) => {
     console.log(form.getFieldValue('title'))
     form.resetFields();
   }
-  renderEmpty(
+  render(
     <Form
       form={form}
       onFinish={onFinish}
