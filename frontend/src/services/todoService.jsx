@@ -1,9 +1,12 @@
-import React from 'react'
+const baseUrl = import.meta.env.VITE_API_URL;
 
-function todoService() {
-  return (
-    <div>todoService</div>
-  )
+export const loadTodos = async () => {
+  const res = await fetch(baseUrl);
+  return res.json;
 }
 
-export default todoService
+export const getTodo = async (id) => {
+  const res = await fetch(`${baseUrl}/${id}`);
+  return await res.json();
+}
+
