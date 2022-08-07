@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Tooltip, Tag, List, Button, PopConfirm, Switch } from 'antd'
+import { CloseOutlined, CheckOutlined } from '@ant-design/icons'
 
-function TodoItem() {
+const TodoItem = ({ todo, onTodoRemoval, onTodoToggle }) => {
   return (
-    <div>TodoItem</div>
+    <List.Item
+      actions={[
+
+      ]}
+    >
+      <div className='todo-item'>
+        <Tag color={todo.completed ? 'cyan' : 'red'} className="todo-tag">
+          {todo.title}
+        </Tag>
+      </div> 
+    </List.Item>
   )
 }
 
