@@ -12,7 +12,7 @@ const TodoForm = ({onFormSubmit}) => {
     console.log(form.getFieldValue('title'))
     form.resetFields();
   }
-  render(
+  return(
     <Form
       form={form}
       onFinish={onFinish}

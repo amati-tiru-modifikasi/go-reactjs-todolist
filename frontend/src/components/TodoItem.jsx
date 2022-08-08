@@ -1,5 +1,5 @@
 import React from 'react'
-import { Tooltip, Tag, List, Button, PopConfirm, Switch } from 'antd'
+import { Tooltip, Tag, List, Button, Popconfirm, Switch } from 'antd'
 import { CloseOutlined, CheckOutlined } from '@ant-design/icons'
 
 const TodoItem = ({ todo, onTodoRemoval, onTodoToggle }) => {
@@ -16,7 +16,7 @@ const TodoItem = ({ todo, onTodoRemoval, onTodoToggle }) => {
             defaultChecked={todo.completed}
           />
         </Tooltip>,
-        <PopConfirm
+        <Popconfirm
           title={'Are you sure want to delete? '}
           onConfirm={() => {
             onTodoRemoval(todo);
@@ -27,7 +27,7 @@ const TodoItem = ({ todo, onTodoRemoval, onTodoToggle }) => {
           <Button className='remove-todo-button' type="primary" danger>
             x
           </Button>
-        </PopConfirm>
+        </Popconfirm>
       ]}
     >
       <div className='todo-item'>
