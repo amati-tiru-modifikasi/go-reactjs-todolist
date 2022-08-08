@@ -17,18 +17,18 @@ const TodoItem = ({ todo, onTodoRemoval, onTodoToggle }) => {
           />
         </Tooltip>,
         <Popconfirm
-          title={'Are you sure want to delete? '}
+          title="Are you sure you want to delete?"
           onConfirm={() => {
             onTodoRemoval(todo);
           }}
-          className="list-item"
-          key={todo.id}
         >
           <Button className='remove-todo-button' type="primary" danger>
             x
           </Button>
         </Popconfirm>
       ]}
+      className="list-item"
+      key={todo.id}
     >
       <div className='todo-item'>
         <Tag color={todo.completed ? 'cyan' : 'red'} className="todo-tag">
